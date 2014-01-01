@@ -1,0 +1,296 @@
+
+@font-face {
+  font-family: 'Almoni';
+  src: url("../fonts/almoni-dl-aaa-400.eot");
+  src: url("../fonts/almoni-dl-aaa-400?#iefix") format("embedded-opentype"), url("../fonts/almoni-dl-aaa-400.woff") format("woff"), url("../fonts/almoni-dl-aaa-400.ttf") format("truetype"), url("../fonts/almoni-dl-aaa-400.svg#almoni-dl-regular") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+html, .view body { direction: rtl; background-color: black; counter-reset: slideidx; }
+body, .view section { background-color: white; border-radius: 12px }
+/* A section is a slide. It's size is 800x600, and this will never change */
+section, .view head > title {
+    font-family: 'Almoni', arial, sans-serif;
+    font-size: 30px;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.view section:after {
+  counter-increment: slideidx;
+  content: counter(slideidx, decimal-leading-zero);
+  position: absolute; bottom: -80px; right: 100px;
+  color: white;
+}
+
+.view head > title {
+  color: white;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+
+.view details {
+  display: none;
+}
+
+h1, h2 {
+  margin-top: 200px;
+  text-align: center;
+  font-size: 80px;
+  color: #D2E643;
+}
+h1 small, h2 small {
+  display: block;
+  font-size: 80%;
+  color: #F2FCA8;
+}
+h2 { font-size: 60px; }
+h2 small { font-size: 60%; }
+h3 {
+  margin: 100px 100px 50px 0;
+}
+h2.opposite { color: #F2FCA8; }
+h2.opposite strong {
+  color: #D2E643;
+}
+
+ul {
+    margin: 50px 200px;
+}
+li > ul {
+    margin: 15px 50px;
+}
+
+p {
+  margin: 75px;
+  font-size: 50px;
+}
+
+code {
+  direction: ltr;
+  text-shadow: none;
+}
+
+.http_code {
+  font-family: 'Share Tech Mono', sans-serif;
+  text-align: left; 
+  background: #222; 
+  padding: 20px; 
+  font-size: 75%; 
+  text-shadow: none; direction: ltr;
+  border: 1px solid #555;
+  border-radius: 2px;
+}
+
+blockquote {
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-size: 60px;
+  padding: 50px;
+}
+blockquote:before {
+  content: open-quote;
+}
+blockquote:after {
+  content: close-quote;
+}
+
+/* Figures are displayed full-page, with the caption on top of the image/video */
+figure {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+figure > * {
+  position: absolute;
+}
+figure > img, figure > video {
+  width: 100%; height: 100%;
+}
+figcaption {
+  margin: 70px;
+  font-size: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 40px;
+  text-align: left;
+}
+
+/* Transition effect */
+section {
+  background: #111;
+  color: #F2FCA8;
+}
+.light_bg {
+  background: #DCF7F3;
+  color: #000;
+}
+section.light_bg {
+  text-shadow: -2px 2px 2px #fff;
+}
+section.blue strong {
+  color: #60DFE5;
+}
+section.pink strong {
+  color: #ff428d;
+}
+.number_1:before, .number_2:before, .number_3:before {
+  border-radius: 50%;
+  border: 3px solid #000;
+  padding: 2px 2px; line-height: 20px; text-align: center;
+  font-size: 80%;
+  width: 20px; height: 20px;
+  display: inline-block;
+  float: left;
+  position: relative; top: 2px; margin-right: 8px;        
+}
+.number_1:before { content: "1"; }
+.number_2:before { content: "2"; }
+.number_3:before { content: "3"; }
+
+li.check { position: relative; }
+li.check:before {
+  content: "✔";
+  position: absolute;
+  top: 0; right: -100px;
+  color: #D2E643;
+}
+
+table.table {
+  margin: 0 50px;
+  text-shadow: none;
+  font-size: 20px;
+  background: white;
+  color: #222;
+  border-collapse: collapse;
+}
+.table th {
+  padding: 5px 10px;
+  border: 1px solid #666;
+  background: #eee;
+}
+.table td {
+  padding: 10px;
+  border: 1px solid #666;
+}
+.table tbody tr td:first-child {
+  text-align: center;
+}
+.table tbody tr td:last-child {
+  white-space: nowrap;
+}
+
+strong {
+  font-weight: bold;
+  color: #D2E643;
+}
+.view section {
+  -moz-transition: none;
+  -webkit-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+
+.view section[aria-selected] {
+  border: 5px red solid;
+}
+
+/* Before */
+section { left: -150%; }
+/* Now */
+section[aria-selected] { left: 0; }
+/* After */
+section[aria-selected] ~ section { left: +150%; }
+
+/* Incremental elements */
+
+/* By default, visible */
+.incremental > * { opacity: 1; }
+
+/* The current item */
+.incremental > *[aria-selected] { opacity: 1; }
+
+/* The items to-be-selected */
+.incremental > *[aria-selected] ~ * { opacity: 0; }
+
+#progress-bar {
+  height: 2px;
+  background: #AAA;
+}
+
+/*
+\#
+\#
+\#     __  __  __       .  __   ___  __
+\#    |  \  / /__` |    | |  \ |__  /__`
+\#    |__/ /_ .__/ |___ | |__/ |___ .__/ core :€
+\#
+\#
+\# The following block of code is not supposed to be edited.
+\# But if you want to change the behavior of these slides,
+\# feel free to hack it!
+\#*/
+
+* { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+[role="note"] { display: none; }
+body {
+  width: 800px; height: 600px;
+  margin-left: -400px; margin-top: -300px;
+  position: absolute; top: 50%; left: 50%;
+  overflow: hidden;
+  display: none;
+}
+.view body {
+  position: static;
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  display: inline-block;
+  overflow: visible; overflow-x: hidden;
+  /* undo Dz.onresize */
+  transform: none !important;
+  -moz-transform: none !important;
+  -webkit-transform: none !important;
+  -o-transform: none !important;
+  -ms-transform: none !important;
+}
+.view head, .view head > title { display: block }
+section {
+  position: absolute;
+  pointer-events: none;
+  width: 100%; height: 100%;
+}
+.view section {
+  pointer-events: auto;
+  position: static;
+  width: 800px; height: 600px;
+  margin: -150px -200px;
+  float: left;
+
+  transform: scale(.4);
+  -moz-transform: scale(.4);
+  -webkit-transform: scale(.4);
+  -o-transform: scale(.4);
+  -ms-transform: scale(.4);
+}
+.view section > * { pointer-events: none; }
+section[aria-selected] { pointer-events: auto; }
+html { overflow: hidden; }
+html.view { overflow: visible; }
+body.loaded { display: block; }
+.incremental {visibility: hidden; }
+.incremental[active] {visibility: visible; }
+#progress-bar{
+  bottom: 0;
+  position: absolute;
+  -moz-transition: width 400ms linear 0s;
+  -webkit-transition: width 400ms linear 0s;
+  -ms-transition: width 400ms linear 0s;
+  transition: width 400ms linear 0s;
+}
+.view #progress-bar {
+  display: none;
+}
