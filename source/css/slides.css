@@ -145,8 +145,8 @@ section.pink strong {
   font-size: 80%;
   width: 20px; height: 20px;
   display: inline-block;
-  float: left;
-  position: relative; top: 2px; margin-right: 8px;        
+  float: right;
+  position: relative; top: 2px; margin-left: 8px;        
 }
 .number_1:before { content: "1"; }
 .number_2:before { content: "2"; }
