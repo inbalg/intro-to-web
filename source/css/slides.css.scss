@@ -1,3 +1,4 @@
+@import 'compass';
 
 @font-face {
   font-family: 'Almoni';
@@ -293,4 +294,19 @@ body.loaded { display: block; }
 }
 .view #progress-bar {
   display: none;
+}
+
+@mixin line($degree) {  
+ width: 40px;
+ border-top: 3px solid black;
+ @include transform(rotate(#{$degree}deg));
+ position: absolute;
+ top: 110px;
+ left: 170px;
+}
+.line1 { @include line(70); }
+.line2 { 
+  @include line(10); 
+  top: 150px;
+  left: 135px;
 }

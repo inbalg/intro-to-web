@@ -1,33 +1,67 @@
 
+<section class="light_bg">
+  <%= partial 'slides/browser_and_server', locals: { labels: true } %>
+  <%= partial 'slides/bsc_arrows' %>
 
-<section>
-  <p style="margin-top: 50px;">
-    <strong>שרת Web</strong> בד"כ מכיל את המרכיבים הבאים:
-  </p>
-  <table style="width: 80%; margin: auto; margin-top: -30px; border: 5px solid #111; background: #222; border-collapse: collapse; text-align: center;">
-    <tr>
-      <td style="width: 50%; border: 5px solid #111; padding: 40px; background: #6CDFEA; color: #000; text-shadow: none;">Data Base (בסיס נתונים)</td>
-    </tr>
-    <tr>
-      <td style="border: 5px solid #111; padding: 40px; background: #ff428d; padding: 40px; color: #000; text-shadow: none;">לוגיקה</td>
-    </tr>
-    <tr>
-      <td style="border: 5px solid #111; background: #C3FF68; padding: 40px; color: #000; text-shadow: none;">תשתית</td>
-    </tr>
-  </table>
+  <div class="number_2" style="display: inline-block; position: absolute; top: 250px; right: 347px;">עיבוד</div>
+
+  <div style="position: absolute; top: 140px; left: 180px;">
+    <img src="img/icon_processing.png" style="width: 50px;">
+  </div>
+  <div style="position: absolute; top: 115px; left: 210px;">
+    <img src="img/icon_processing.png" style="width: 25px;">
+  </div>
+
+  <div role="note">
+  </div>
+</section>
+<section class="light_bg">
+  <%= partial 'slides/browser_and_server', locals: { labels: true } %>
+  <%= partial 'slides/bsc_arrows' %>
+
+  <div class="number_2" style="display: inline-block; position: absolute; top: 250px; right: 347px;">עיבוד</div>
+
+  <div style="position: absolute; top: 140px; left: 180px;">
+    <img src="img/icon_processing.png" style="width: 50px;">
+  </div>
+  <div style="position: absolute; top: 115px; left: 210px;">
+    <img src="img/icon_processing.png" style="width: 25px;">
+  </div>
+  <div style="position: absolute; top: 30px; left: 150px;">
+    <img src="img/icon_data.png" style="width: 60px;">
+  </div>
+  <div class="line1"></div>
+
+  <div role="note">
+  </div>
+</section>
+<section class="light_bg">
+  <%= partial 'slides/browser_and_server', locals: { labels: true } %>
+  <%= partial 'slides/bsc_arrows' %>
+
+  <div class="number_2" style="display: inline-block; position: absolute; top: 250px; right: 347px;">עיבוד</div>
+
+  <div style="position: absolute; top: 140px; left: 180px;">
+    <img src="img/icon_processing.png" style="width: 50px;">
+  </div>
+  <div style="position: absolute; top: 115px; left: 210px;">
+    <img src="img/icon_processing.png" style="width: 25px;">
+  </div>
+  <div style="position: absolute; top: 30px; left: 150px;">
+    <img src="img/icon_data.png" style="width: 60px;">
+  </div>
+  <div style="position: absolute; top: 115px; left: 80px;">
+    <img src="img/icon_rails.png" style="width: 45px;">
+  </div>
+  <div class="line1"></div>
+  <div class="line2"></div>
+
   <div role="note">
   </div>
 </section>
 
-<!-- <section>
-  אתר סטטי לעומת אתר דינאמי
-  <div role="note">
-  </div>
-</section> -->
-
 <section class="blue">
-  <p><strong>בסיס נתונים</strong> הוא אוסף של טבלאות</p>
-  <table class="table" style="margin: auto;">
+  <table class="table" style="margin: 50px auto 0 auto;">
     <thead>
       <th>מספר</th>
       <th>שם</th>
@@ -83,25 +117,112 @@
         <td>22.11.2008</td>
         <td>כן</td>
       </tr>
+      <tr>
+        <td>6</td>
+        <td>ששון</td>
+        <td>באסט האונד</td>
+        <td>זכר</td>
+        <td>שחור-חום</td>
+        <td>12.10.2005</td>
+        <td>כן</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>לירון</td>
+        <td>מעורבת</td>
+        <td>נקבה</td>
+        <td>שמנת</td>
+        <td>2.4.2013</td>
+        <td>כן</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>דובה</td>
+        <td>גולדן-לברדור</td>
+        <td>נקבה</td>
+        <td>לבן</td>
+        <td>2.12.2012</td>
+        <td>כן</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>פו</td>
+        <td>קטן-קטן</td>
+        <td>נקבה</td>
+        <td>לבן-כתום</td>
+        <td>28.9.2009</td>
+        <td>כן</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>שושה</td>
+        <td>אמסטף</td>
+        <td>נקבה</td>
+        <td>שחור</td>
+        <td>21.5.2013</td>
+        <td>כן</td>
+      </tr>
     </tbody>
   </table>
   <div role="note">
-    אוסף של טבלאות<br>
-    הסבר על הטבלה<br>
-    עמודה = שדה<br>
-    שורה = רשומה<br>
+
   </div>
 </section>
 
-<section class="pink">
-  <p><strong>הלוגיקה</strong> משתמשת ב-Data Base בשביל לייצר מסמכי HTML</p>
-  <p>אנחנו נלמד לתכנת לוגיקה ב-<strong>Ruby on Rails</strong></p>
+<section>
+  <pre style="margin-top: 0px; margin-left: -10px;">
+    <code class="ruby" style="font-size: 80%;">
+      # dogs_controller.rb
+      # ------------------------------------------
+
+      # Get all dogs
+      @dogs = Dog.all
+
+      # Find a specific dog
+      @dog  = Dog.find(1)
+
+      # Get all the female dogs
+      @dogs = Dog.where(gender: :female)
+
+      # Get all the female dogs and order them by age.
+      @dogs = Dog.where(gender: :female)
+                 .order('born_at ASC')
+    </code>
+  </pre>
   <div role="note">
   </div>
 </section>
 
 <section>
-  <p><strong>התשתית</strong> מקשרת בין האינטרנט ושאר מרכיבי השרת.</p>
+  <pre style="margin-top: -20px; margin-left: 100px;">
+    <code class="erb" style="font-size: 60%;">
+      &lt;!-- index.html.erb --&gt;
+
+      &lt;h1&gt;Listing dogs&lt;/h1&gt;
+
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Breed&lt;/th&gt;
+            &lt;th&gt;Gender&lt;/th&gt;
+            &lt;th&gt;Fur color&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+          &lt;% @dogs.each do |dog| %&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;%= dog.name %&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;%= dog.breed %&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;%= dog.gender %&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;%= dog.fur_color %&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;% end %&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    </code>
+  </pre>
   <div role="note">
   </div>
 </section>
