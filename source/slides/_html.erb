@@ -1,4 +1,7 @@
 
 <%= partial 'slides/html_intro' %>
-<%= partial 'slides/html1' %>
-<%= partial 'slides/html2' %>
+<%= partial 'slides/html1', locals: { audience: audience, website: website } %>
+
+<% if table %>
+  <%= partial 'slides/html2' %>
+<% end %>

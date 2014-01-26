@@ -2,10 +2,12 @@
 <section>
   <pre>
     <code class="xml">
-&lt;p&gt;Hello Rails Girls Tel-Aviv!&lt;/p&gt;
+&lt;p&gt;Hello <%= audience %>!&lt;/p&gt;
     </code>
   </pre>
-  <img src="img/code_sample_1.png" style="max-width: 80%; margin: auto; margin-top: 35px; box-shadow: 0 0 20px black; display: block;" />
+  <div class="code_sample" style="margin-top: 35px;">
+    <p>Hello <%= audience %>!</p>
+  </div>
   <div role="note">
     זה הקוד<br>
     <span class="note_pause">להמתין 3 שניות</span><br>
@@ -20,9 +22,13 @@
   <pre>
     <code class="xml">
 &lt;h1&gt;Hello!&lt;/h1&gt;          
-&lt;p&gt;Hello Rails Girls Tel-Aviv!&lt;/p&gt;
+&lt;p&gt;Hello <%= audience %>!&lt;/p&gt;
     </code>
   </pre>
+  <div class="code_sample">
+    <h1>Hello!</h1>
+    <p>Hello <%= audience %>!</p>
+  </div>
   <img src="img/code_sample_2.png" style="max-width: 80%; margin: auto; box-shadow: 0 0 20px black; display: block;" />
   <div role="note">
     h1 זאת תגית כותרת.
@@ -34,11 +40,15 @@
   <pre>
     <code class="xml" style="font-size: 80%;">
 &lt;h1&gt;Hello!&lt;/h1&gt;          
-&lt;p&gt;Hello Rails Girls Tel-Aviv!&lt;/p&gt;
-&lt;a href=&quot;http://railsgirls.com/tel-aviv&quot;&gt;Our Website&lt;/a&gt;
+&lt;p&gt;Hello <%= audience %>!&lt;/p&gt;
+&lt;a href=&quot;<%= website %>&quot;&gt;Our Website&lt;/a&gt;
     </code>
   </pre>
-  <img src="img/code_sample_3.png" style="max-width: 80%; margin: auto; margin-top: 6px; box-shadow: 0 0 20px black; display: block;" />
+  <div class="code_sample" style="margin-top: 6px">
+    <h1>Hello!</h1>
+    <p>Hello <%= audience %>!</p>
+    <a href="<%= website %>" style="position: relative; top: -10px;">Our Website</a>
+  </div>
   <div role="note">
     a זה לינק.<br>
     <span class="note_pause">להמתין טיפה</span><br>
@@ -53,12 +63,18 @@
   <pre>
     <code class="xml" style="font-size: 80%;">
 &lt;h1&gt;Hello!&lt;/h1&gt;          
-&lt;p&gt;Hello Rails Girls Tel-Aviv!&lt;/p&gt;
-&lt;a href=&quot;http://railsgirls.com/tel-aviv&quot;&gt;Our Website&lt;/a&gt;
+&lt;p&gt;Hello <%= audience %>!&lt;/p&gt;
+&lt;a href=&quot;<%= website %>&quot;&gt;Our Website&lt;/a&gt;
 &lt;img src=&quot;cupcake.jpg&quot;&gt;
     </code>
   </pre>
-  <img src="img/code_sample_4.png" style="max-width: 80%; margin: auto; margin-top: -22px; box-shadow: 0 0 20px black; display: block;" />
+  <div class="code_sample" style="margin-top: -22px">
+    <h1>Hello!</h1>
+    <p>Hello <%= audience %>!</p>
+    <a href="<%= website %>" style="position: relative; top: -10px;">Our Website</a>
+    <br>
+    <img src="http://foodswallpaper.com/wp-content/uploads/2013/11/cupcakes.jpg" style="width: 120px;">
+  </div>
   <div role="note">
     אז בואו נוסיף גם תמונה.<br>
     I-M-G, קיצור של image<br>
@@ -77,14 +93,20 @@
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Hello!&lt;/h1&gt;          
-    &lt;p&gt;Hello Rails Girls Tel-Aviv!&lt;/p&gt;
-    &lt;a href=&quot;http://railsgirls.com/tel-aviv&quot;&gt;Our Website&lt;/a&gt;
+    &lt;p&gt;Hello <%= audience %>!&lt;/p&gt;
+    &lt;a href=&quot;<%= website %>&quot;&gt;Our Website&lt;/a&gt;
     &lt;img src=&quot;cupcake.jpg&quot;&gt;
   &lt;/body&gt;
 &lt;/html&gt;
     </code>
   </pre>
-  <img src="img/code_sample_5.png" style="max-width: 80%; margin: auto; margin-top: -71px; box-shadow: 0 0 20px black; display: block;" />
+  <div class="code_sample" style="margin-top: -71px; background-image: url(../img/browser_title.png);">
+    <h1>Hello!</h1>
+    <p>Hello <%= audience %>!</p>
+    <a href="<%= website %>" style="position: relative; top: -10px;">Our Website</a>
+    <br>
+    <img src="http://foodswallpaper.com/wp-content/uploads/2013/11/cupcakes.jpg" style="width: 120px;">
+  </div>
   <div role="note">
     <p class="note_pause">להמתין 2 שניות ולעבור הלאה</p>
   </div>
@@ -108,8 +130,8 @@
   &lt;/head&gt;   
   &lt;body&gt;       
     &lt;h1&gt;Hello!&lt;/h1&gt;          
-    &lt;p&gt;Hello Rails Girls Tel-Aviv!&lt;/p&gt;
-    &lt;a href=&quot;http://railsgirls.com/tel-aviv&quot;&gt;Our Website&lt;/a&gt;
+    &lt;p&gt;Hello <%= audience %>!&lt;/p&gt;
+    &lt;a href=&quot;<%= website %>&quot;&gt;Our Website&lt;/a&gt;
     &lt;img src=&quot;cupcake.jpg&quot;&gt;
   &lt;/body&gt;
 &lt;/html&gt;

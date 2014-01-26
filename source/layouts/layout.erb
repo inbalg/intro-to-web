@@ -9,39 +9,7 @@
   </head>
   <body>
 
-    <section style="text-align: center;">
-        <!-- This is the first slide -->
-        <h1 style="margin-top: 100px; margin-bottom: 50px;">פיתוח Web <small>מבוא</small></h1>
-        <img src="img/browser_blank.png" style="max-width: 80%; margin: auto; box-shadow: 0 0 20px black;" />
-        <div role="note">
-          <ul>
-            <li>כוכב</li>
-            <li>multiplatform</li>
-          </ul>
-        </div>
-    </section>
-
-    <%#= partial 'slides/introduction' %>
-    <%#= partial 'slides/web' %>
-
-    <!-- client -->
-    <%= partial 'slides/how_it_works' %>
-    <%= partial 'slides/browser_server_cycle' %>
-    <%= partial 'slides/html' %>
-    <%= partial 'slides/css' %>
-
-    <%#= partial 'slides/http' %>
-    <%#= partial 'slides/partial_summary' %>
-
-    <!-- server -->
-    <%= partial 'slides/server' %>
-    <%= partial 'slides/sublime' %>
-
-    <!-- summary -->
-    <%= partial 'slides/summary' %>
-
-    <%= partial 'slides/the_end' %>
-
+    <%= yield %>
 
     <div id="progress-bar"></div>
 
