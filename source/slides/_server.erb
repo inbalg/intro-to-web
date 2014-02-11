@@ -173,19 +173,36 @@
 <section>
   <pre style="margin-top: 0px; margin-left: -10px;">
     <code class="ruby" style="font-size: 80%;">
-      # dogs_controller.rb
-      # ------------------------------------------
-
-      # Get all dogs
       @dogs = Dog.all
+    </code>
+  </pre>
+  <div role="note">
+  </div>
+</section>
 
-      # Find a specific dog
+<section>
+  <pre style="margin-top: 0px; margin-left: -10px;">
+    <code class="ruby" style="font-size: 80%;">
       @dog  = Dog.find(1)
+    </code>
+  </pre>
+  <div role="note">
+  </div>
+</section>
 
-      # Get all the female dogs
+<section>
+  <pre style="margin-top: 0px; margin-left: -10px;">
+    <code class="ruby" style="font-size: 80%;">
       @dogs = Dog.where(gender: :female)
+    </code>
+  </pre>
+  <div role="note">
+  </div>
+</section>
 
-      # Get all the female dogs and order them by age.
+<section>
+  <pre style="margin-top: 0px; margin-left: -10px;">
+    <code class="ruby" style="font-size: 80%;">
       @dogs = Dog.where(gender: :female)
                  .order('born_at ASC')
     </code>
@@ -197,10 +214,80 @@
 <section>
   <pre style="margin-top: -20px; margin-left: 100px;">
     <code class="erb" style="font-size: 60%;">
-      &lt;!-- index.html.erb --&gt;
+      &lt;table&gt;
+      &lt;/table&gt;
+    </code>
+  </pre>
+  <div role="note">
+  </div>
+</section>
 
-      &lt;h1&gt;Listing dogs&lt;/h1&gt;
+<section>
+  <pre style="margin-top: -20px; margin-left: 100px;">
+    <code class="erb" style="font-size: 60%;">
+      &lt;table&gt;
+        &lt;thead&gt;
+        &lt;/thead&gt;
 
+        &lt;tbody&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    </code>
+  </pre>
+  <div role="note">
+  </div>
+</section>
+
+<section>
+  <pre style="margin-top: -20px; margin-left: 100px;">
+    <code class="erb" style="font-size: 60%;">
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Breed&lt;/th&gt;
+            &lt;th&gt;Gender&lt;/th&gt;
+            &lt;th&gt;Fur color&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    </code>
+  </pre>
+  <div role="note">
+  </div>
+</section>
+
+<section>
+  <pre style="margin-top: -20px; margin-left: 100px;">
+    <code class="erb" style="font-size: 60%;">
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Breed&lt;/th&gt;
+            &lt;th&gt;Gender&lt;/th&gt;
+            &lt;th&gt;Fur color&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+          &lt;% @dogs.each do |dog| %&gt;
+          
+          &lt;% end %&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    </code>
+  </pre>
+  <div role="note">
+  </div>
+</section>
+
+<section>
+  <pre style="margin-top: -20px; margin-left: 100px;">
+    <code class="erb" style="font-size: 60%;">
       &lt;table&gt;
         &lt;thead&gt;
           &lt;tr&gt;
